@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { getHorariosCursado } from "./horarios";
+import { Especialidades, getHorariosCursado } from "./horarios";
 export type HorarioCurso = {
   dias?: Record<string, Horario[]>;
 } & ParsedRow;
@@ -18,11 +18,8 @@ type ParsedRow = {
   horaInicio: string;
   horaFin: string;
 };
-export default async function htmlTableToObject() {
-  const text = await getHorariosCursado();
-  // Obtenemos la tabla
-
-  const table = text
+export default async function htmlTableToObject(t:string) {
+  const table = t
     .split("</table>")
     .join("ASD")
     .split('<table align="center" width="700" id="horario" >')
@@ -86,14 +83,7 @@ export default async function htmlTableToObject() {
     },
     horarios[0]
   );
-  try {
-    fs.writeFileSync(
-      "./parsedTable.json",
-      JSON.stringify(finalResult, null, 2)
-    );
-  } catch (e) {
-    console.log(e);
-  }
+
   return finalResult;
 }
 function parseHTMLRow(row: string): ParsedRow {

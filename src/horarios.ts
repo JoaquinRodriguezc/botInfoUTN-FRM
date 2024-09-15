@@ -1,8 +1,18 @@
-import fs from "node:fs";
 import { StringDecoder } from "node:string_decoder";
-export async function getHorariosCursado(): Promise<string> {
+import htmlTableToObject from "./parser";
+import fs from 'node:fs'
+export enum Especialidades {
+  SISTEMAS = "5",
+  ELECTRONICA = "9",
+  CIVIL = "31",
+  ELECTROMECANICA= "8",
+  TELECOMUNICACIONES = "15",
+  QUIMICA = "27"
+
+}
+export async function getHorariosCursado(especialidad:Especialidades): Promise<string> {
   const formData = new URLSearchParams();
-  formData.append("especialidad", "9");
+  formData.append("especialidad", especialidad );
   try {
     const response = await fetch(
       "http://encuesta.frm.utn.edu.ar/horariocurso/",
@@ -28,3 +38,16 @@ export async function getHorariosCursado(): Promise<string> {
     console.log(e);
   }
 }
+export async function getAllHorariosCursados(){
+  const horariosCursado = await Promise.all([
+    ...Object.values(Especialidades).map((especialidad)=>{
+      return getHorariosCursado(especialidad)
+    })
+  ])
+ await Promise.all([
+    ...horariosCursado.map((async (h,i) => {
+      return fs.writeFile( `../../horarios/parsed-${Especialidades[i]}.json `, JSON.stringify(await htmlTableToObject(h),null,2), e=>console.log(e))
+    }))
+  ])
+}
+await getAllHorariosCursados();

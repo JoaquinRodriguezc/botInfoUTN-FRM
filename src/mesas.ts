@@ -1,6 +1,10 @@
 import { google, calendar_v3 } from "googleapis";
 import { calendar } from "./calendar";
-
+type DateForSubject = {
+  day: string;
+  degree: string;
+  subject: string;
+};
 export async function listUpcomingEvents() {
   try {
     const res = await calendar.events.list({
@@ -106,11 +110,7 @@ function getLines(description: string): string[] {
     .map((e) => e.slice(0, -4))
     .filter((e) => e !== "" && !e.startsWith("Mesa"));
 }
-type DateForSubject = {
-  day: string;
-  degree: string;
-  subject: string;
-};
+
 function getDateForSubject(
   info: Map<string, Map<string, string[]>>,
   subject: string
@@ -142,4 +142,3 @@ function getDateForSubject(
   return res;
 }
 
-function isThereSubjectDate() {}
