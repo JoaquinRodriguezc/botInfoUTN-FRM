@@ -79,13 +79,10 @@ export async function loadHorarios() {
     console.log(error);
   }
 }
-export async function searchHorario(
-  plan: string,
-  materia: string,
-  curso: string
-) {
+export async function searchHorario(materia: string, curso: string) {
   const horarios = await loadHorarios();
   console.log(horarios);
+  console.log("Buscando horariso de ", materia, " ", curso);
   const found = horarios.filter((e) => {
     if (e.materia === materia && e.curso === curso) {
       return e;
@@ -97,9 +94,17 @@ export async function searchHorario(
   }
   return found;
 }
-const f = await searchHorario(
-  "2023",
-  "Algoritmos y Estructuras de Datos",
-  "1K01"
-);
-f.forEach((f) => console.log(f));
+
+export function prettyPrintForWhatsApp(horario: HorarioCurso): string {
+  let result = `📚 *Materia*: ${horario.materia}\n📅 *Año*: ${horario.año}\n🗂 *Curso*: ${horario.curso}\n🔢 *Dictado*: ${horario.dictado}\n\n`;
+
+  for (const plan in horario.dias) {
+    result += `📝 *${plan}*\n`;
+    horario.dias[plan].forEach((dia) => {
+      result += `   📅 *${dia.diaCursado}*: ${dia.horaInicio} - ${dia.horaFin}\n`;
+    });
+    result += "\n";
+  }
+
+  return result.trim();
+}

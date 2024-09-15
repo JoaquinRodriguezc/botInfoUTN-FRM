@@ -9,41 +9,29 @@ import {
 import { MemoryDB as Database } from "@builderbot/bot";
 import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
 import { getAll, getBySubject, listUpcomingEvents } from "./mesas";
+import { prettyPrintForWhatsApp, searchHorario } from "./horarios";
 
 const PORT = process.env.PORT ?? 3008;
 
-const discordFlow = addKeyword<Provider, Database>("doc").addAnswer(
-  [
-    "You can see the documentation here",
-    "📄 https://builderbot.app/docs \n",
-    "Do you want to continue? *yes*",
-  ].join("\n"),
-  { capture: true },
-  async (ctx, { gotoFlow, flowDynamic }) => {
-    if (ctx.body.toLocaleLowerCase().includes("yes")) {
-      return gotoFlow(registerFlow);
+const horariosFlow = addKeyword("!horario").addAnswer(
+  "Buscando horario...",
+  null,
+  async (ctx, { flowDynamic }) => {
+    const args = ctx.body.split(" ");
+    if (args.length >= 3) {
+      const materia = args.slice(1, -1).join(" ");
+      const res = await searchHorario(materia, args.pop());
+      if (!res) {
+        console.log("error", res);
+        return;
+      }
+      await flowDynamic(prettyPrintForWhatsApp(res[0]));
+    } else {
+      console.log("ERROR");
     }
-    await flowDynamic("Thanks!");
-    return;
   }
 );
 
-const welcomeFlow = addKeyword<Provider, Database>(["hi", "hello", "hola"])
-  .addAnswer(`🙌 Hello welcome to this *Chatbot*`)
-  .addAnswer(
-    [
-      "I share with you the following links of interest about the project",
-      "👉 *doc* to view the documentation",
-    ].join("\n"),
-    { delay: 800, capture: true },
-    async (ctx, { fallBack }) => {
-      if (!ctx.body.toLocaleLowerCase().includes("doc")) {
-        return fallBack("You should type *doc*");
-      }
-      return;
-    },
-    [discordFlow]
-  );
 const mesasFlow = addKeyword("!mesas").addAnswer(
   "Buscando mesa...",
   null,
@@ -102,7 +90,7 @@ const fullSamplesFlow = addKeyword<Provider, Database>([
   });
 
 const main = async () => {
-  const adapterFlow = createFlow([mesasFlow]);
+  const adapterFlow = createFlow([mesasFlow, horariosFlow]);
 
   const adapterProvider = createProvider(Provider);
   const adapterDB = new Database();
