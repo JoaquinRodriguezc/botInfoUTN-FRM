@@ -2,39 +2,39 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Análisis Matemático II ",
-    "curso": "1RIV1 ",
+    "materia": "Análisis Matemático II",
+    "curso": "1RIV1",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "09:30",
           "horaFin": "12:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "08:00",
           "horaFin": "10:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "10:30",
           "horaFin": "12:45"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "09:30",
           "horaFin": "12:45"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "08:00",
           "horaFin": "10:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "10:30",
           "horaFin": "12:45"
         }
@@ -44,49 +44,49 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Física I ",
-    "curso": "1RIV1 ",
+    "materia": "Física I",
+    "curso": "1RIV1",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "14:00",
           "horaFin": "16:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "14:00",
           "horaFin": "16:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:30",
           "horaFin": "18:00"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "14:00",
           "horaFin": "15:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "14:00",
           "horaFin": "16:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "14:00",
           "horaFin": "16:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:30",
           "horaFin": "18:00"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "14:00",
           "horaFin": "15:30"
         }
@@ -96,39 +96,39 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Física I ",
-    "curso": "1X10 ",
+    "materia": "Física I",
+    "curso": "1X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "13:45",
           "horaFin": "15:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "13:45",
           "horaFin": "16:45"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "13:00",
           "horaFin": "16:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "13:45",
           "horaFin": "15:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "13:45",
           "horaFin": "16:45"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "13:00",
           "horaFin": "16:00"
         }
@@ -138,39 +138,39 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Física I ",
-    "curso": "1X100 ",
+    "materia": "Física I",
+    "curso": "1X100",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "14:30",
           "horaFin": "17:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "13:45",
           "horaFin": "16:45"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "14:30",
           "horaFin": "17:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "13:45",
           "horaFin": "16:45"
         }
@@ -180,39 +180,39 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Física I ",
-    "curso": "1X19 ",
+    "materia": "Física I",
+    "curso": "1X19",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "22:45"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "22:45"
         }
@@ -222,12 +222,12 @@
   {
     "año": "1",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica I ",
-    "curso": "1RIV1 ",
+    "materia": "Ingeniería Electromecánica I",
+    "curso": "1RIV1",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "18:00",
           "horaFin": "20:15"
         }
@@ -237,19 +237,19 @@
   {
     "año": "1",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica I ",
-    "curso": "1X10 ",
+    "materia": "Ingeniería Electromecánica I",
+    "curso": "1X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "15:15",
           "horaFin": "16:45"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "15:15",
           "horaFin": "16:45"
         }
@@ -259,19 +259,19 @@
   {
     "año": "1",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica I ",
-    "curso": "1X19 ",
+    "materia": "Ingeniería Electromecánica I",
+    "curso": "1X19",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -281,19 +281,19 @@
   {
     "año": "1",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica I ",
-    "curso": "1X190 ",
+    "materia": "Ingeniería Electromecánica I",
+    "curso": "1X190",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "10:15",
           "horaFin": "11:45"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "10:15",
           "horaFin": "12:30"
         }
@@ -303,19 +303,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Ingeniería y Sociedad ",
-    "curso": "1RIV1 ",
+    "materia": "Ingeniería y Sociedad",
+    "curso": "1RIV1",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "14:00",
           "horaFin": "17:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "14:00",
           "horaFin": "17:00"
         }
@@ -325,19 +325,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Ingeniería y Sociedad ",
-    "curso": "1X10 ",
+    "materia": "Ingeniería y Sociedad",
+    "curso": "1X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
@@ -347,19 +347,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Ingeniería y Sociedad ",
-    "curso": "1X100 ",
+    "materia": "Ingeniería y Sociedad",
+    "curso": "1X100",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
@@ -369,19 +369,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Ingeniería y Sociedad ",
-    "curso": "1X19 ",
+    "materia": "Ingeniería y Sociedad",
+    "curso": "1X19",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "09:30",
           "horaFin": "12:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "09:30",
           "horaFin": "12:30"
         }
@@ -391,49 +391,49 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Química General ",
-    "curso": "1RIV1 ",
+    "materia": "Química General",
+    "curso": "1RIV1",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "16:30",
           "horaFin": "18:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "18:00",
           "horaFin": "19:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "15:30",
           "horaFin": "17:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:00",
           "horaFin": "17:15"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "16:30",
           "horaFin": "18:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "18:00",
           "horaFin": "19:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "15:30",
           "horaFin": "17:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:00",
           "horaFin": "17:00"
         }
@@ -443,34 +443,34 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Química General ",
-    "curso": "1X10 ",
+    "materia": "Química General",
+    "curso": "1X10",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:45",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "16:45",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:30",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
@@ -480,39 +480,39 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Química General ",
-    "curso": "1X100 ",
+    "materia": "Química General",
+    "curso": "1X100",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "16:45",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "13:45",
           "horaFin": "16:45"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "13:45",
           "horaFin": "16:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "16:45",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "13:45",
           "horaFin": "16:45"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "13:45",
           "horaFin": "16:00"
         }
@@ -522,39 +522,39 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Química General ",
-    "curso": "1X19 ",
+    "materia": "Química General",
+    "curso": "1X19",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "20:30",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "20:30",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -564,29 +564,29 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Representación Gráfica ",
-    "curso": "1RIV1 ",
+    "materia": "Representación Gráfica",
+    "curso": "1RIV1",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "10:30",
           "horaFin": "12:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "08:00",
           "horaFin": "10:15"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "10:30",
           "horaFin": "12:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "08:00",
           "horaFin": "10:15"
         }
@@ -596,29 +596,29 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Representación Gráfica ",
-    "curso": "1X19 ",
+    "materia": "Representación Gráfica",
+    "curso": "1X19",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -628,19 +628,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Representación Gráfica ",
-    "curso": "1X190 ",
+    "materia": "Representación Gráfica",
+    "curso": "1X190",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
@@ -650,19 +650,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Representación Gráfica ",
-    "curso": "1X91 ",
+    "materia": "Representación Gráfica",
+    "curso": "1X91",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
@@ -672,19 +672,19 @@
   {
     "año": "1",
     "dictado": "2",
-    "materia": "Representación Gráfica ",
-    "curso": "1X92 ",
+    "materia": "Representación Gráfica",
+    "curso": "1X92",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
@@ -694,29 +694,29 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Conocimiento de Materiales ",
-    "curso": "2X10 ",
+    "materia": "Conocimiento de Materiales",
+    "curso": "2X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:45",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:45",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -726,29 +726,29 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Conocimiento de Materiales ",
-    "curso": "2X4 ",
+    "materia": "Conocimiento de Materiales",
+    "curso": "2X4",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:45",
           "horaFin": "18:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:45",
           "horaFin": "18:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         }
@@ -758,29 +758,29 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Conocimiento de Materiales ",
-    "curso": "2X44 ",
+    "materia": "Conocimiento de Materiales",
+    "curso": "2X44",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "18:15",
           "horaFin": "19:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "18:15",
           "horaFin": "19:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
@@ -790,29 +790,29 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Estabilidad ",
-    "curso": "2X10 ",
+    "materia": "Estabilidad",
+    "curso": "2X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -822,29 +822,29 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Estabilidad ",
-    "curso": "2X4 ",
+    "materia": "Estabilidad",
+    "curso": "2X4",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "14:30",
           "horaFin": "16:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:30",
           "horaFin": "16:45"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "14:30",
           "horaFin": "16:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:30",
           "horaFin": "16:45"
         }
@@ -854,29 +854,29 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Estabilidad ",
-    "curso": "2X44 ",
+    "materia": "Estabilidad",
+    "curso": "2X44",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "13:45",
           "horaFin": "16:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:30",
           "horaFin": "16:45"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "13:45",
           "horaFin": "16:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "14:30",
           "horaFin": "16:45"
         }
@@ -886,19 +886,19 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica II ",
-    "curso": "2X10 ",
+    "materia": "Ingeniería Electromecánica II",
+    "curso": "2X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "21:15",
           "horaFin": "22:45"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "21:15",
           "horaFin": "22:45"
         }
@@ -908,19 +908,19 @@
   {
     "año": "2",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica II ",
-    "curso": "2X4 ",
+    "materia": "Ingeniería Electromecánica II",
+    "curso": "2X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "14:30",
           "horaFin": "16:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "14:30",
           "horaFin": "16:00"
         }
@@ -930,29 +930,29 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Inglés I ",
-    "curso": "2B-61 ",
+    "materia": "Inglés I",
+    "curso": "2B-61",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         }
@@ -962,29 +962,29 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Inglés I ",
-    "curso": "2B-66 ",
+    "materia": "Inglés I",
+    "curso": "2B-66",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "12:30",
           "horaFin": "14:00"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "12:30",
           "horaFin": "14:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "12:30",
           "horaFin": "14:00"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "12:30",
           "horaFin": "14:00"
         }
@@ -994,29 +994,29 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Probabilidad y Estadística ",
-    "curso": "2X10 ",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -1026,19 +1026,19 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Probabilidad y Estadística ",
-    "curso": "2X4 ",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2X4",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "14:30",
           "horaFin": "19:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "14:30",
           "horaFin": "19:00"
         }
@@ -1048,19 +1048,19 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Probabilidad y Estadística ",
-    "curso": "2X44 ",
+    "materia": "Probabilidad y Estadística",
+    "curso": "2X44",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "08:00",
           "horaFin": "12:30"
         }
@@ -1070,19 +1070,19 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Programación en Computación ",
-    "curso": "2X10 ",
+    "materia": "Programación en Computación",
+    "curso": "2X10",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "23:30"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "23:30"
         }
@@ -1092,19 +1092,19 @@
   {
     "año": "2",
     "dictado": "2",
-    "materia": "Programación en Computación ",
-    "curso": "2X4 ",
+    "materia": "Programación en Computación",
+    "curso": "2X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "14:30",
           "horaFin": "19:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "14:30",
           "horaFin": "19:00"
         }
@@ -1114,29 +1114,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Electrotecnia ",
-    "curso": "3X3 ",
+    "materia": "Electrotecnia",
+    "curso": "3X3",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         }
@@ -1146,29 +1146,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Electrotecnia ",
-    "curso": "3X4 ",
+    "materia": "Electrotecnia",
+    "curso": "3X4",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "22:00",
           "horaFin": "23:30"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "22:00",
           "horaFin": "23:30"
         }
@@ -1178,29 +1178,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Electrotecnia ",
-    "curso": "3X5 ",
+    "materia": "Electrotecnia",
+    "curso": "3X5",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         }
@@ -1210,12 +1210,12 @@
   {
     "año": "3",
     "dictado": "2",
-    "materia": "Formación de Emprendedores (Elec.) ",
-    "curso": "7X1 ",
+    "materia": "Formación de Emprendedores (Elec.)",
+    "curso": "7X1",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
@@ -1225,17 +1225,17 @@
   {
     "año": "3",
     "dictado": "2",
-    "materia": "Hidrodinámica y Neumática (Elec.) ",
-    "curso": "3X3 ",
+    "materia": "Hidrodinámica y Neumática (Elec.)",
+    "curso": "3X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
@@ -1245,17 +1245,17 @@
   {
     "año": "3",
     "dictado": "2",
-    "materia": "Hidrodinámica y Neumática (Elec.) ",
-    "curso": "3X4 ",
+    "materia": "Hidrodinámica y Neumática (Elec.)",
+    "curso": "3X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1265,19 +1265,19 @@
   {
     "año": "3",
     "dictado": "2",
-    "materia": "Higiene y Seguridad Industrial ",
-    "curso": "3X3 ",
+    "materia": "Higiene y Seguridad Industrial",
+    "curso": "3X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "08:30",
           "horaFin": "11:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "08:30",
           "horaFin": "11:30"
         }
@@ -1287,19 +1287,19 @@
   {
     "año": "3",
     "dictado": "2",
-    "materia": "Higiene y Seguridad Industrial ",
-    "curso": "3X4 ",
+    "materia": "Higiene y Seguridad Industrial",
+    "curso": "3X4",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "15:15",
           "horaFin": "18:15"
         }
       ],
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "15:15",
           "horaFin": "18:15"
         }
@@ -1309,24 +1309,24 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica III ",
-    "curso": "3X3 ",
+    "materia": "Ingeniería Electromecánica III",
+    "curso": "3X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "18:15",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "08:00",
           "horaFin": "10:15"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "18:15",
           "horaFin": "20:30"
         }
@@ -1336,24 +1336,24 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Ingeniería Electromecánica III ",
-    "curso": "3X4 ",
+    "materia": "Ingeniería Electromecánica III",
+    "curso": "3X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "20:30",
           "horaFin": "22:45"
         },
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "10:15",
           "horaFin": "12:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "20:30",
           "horaFin": "22:45"
         }
@@ -1363,29 +1363,29 @@
   {
     "año": "3",
     "dictado": "2",
-    "materia": "Inglés II ",
-    "curso": "3B-71 ",
+    "materia": "Inglés II",
+    "curso": "3B-71",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "11:00",
           "horaFin": "12:30"
         }
@@ -1395,29 +1395,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Mecánica y Mecanismos ",
-    "curso": "3X3 ",
+    "materia": "Mecánica y Mecanismos",
+    "curso": "3X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1427,29 +1427,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Mecánica y Mecanismos ",
-    "curso": "3X4 ",
+    "materia": "Mecánica y Mecanismos",
+    "curso": "3X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "22:00",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "22:00",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1459,29 +1459,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Mecánica y Mecanismos ",
-    "curso": "3X5 ",
+    "materia": "Mecánica y Mecanismos",
+    "curso": "3X5",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1491,29 +1491,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Tecnología Mecánica ",
-    "curso": "3X3 ",
+    "materia": "Tecnología Mecánica",
+    "curso": "3X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "18:15",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "18:15",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1523,29 +1523,29 @@
   {
     "año": "3",
     "dictado": "A",
-    "materia": "Tecnología Mecánica ",
-    "curso": "3X4 ",
+    "materia": "Tecnología Mecánica",
+    "curso": "3X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "20:30",
           "horaFin": "22:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "20:30",
           "horaFin": "22:45"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
@@ -1555,29 +1555,29 @@
   {
     "año": "4",
     "dictado": "2",
-    "materia": "Economía ",
-    "curso": "4X3 ",
+    "materia": "Economía",
+    "curso": "4X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "17:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "17:30"
         }
@@ -1587,39 +1587,39 @@
   {
     "año": "4",
     "dictado": "2",
-    "materia": "Economía ",
-    "curso": "4X4 ",
+    "materia": "Economía",
+    "curso": "4X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "22:00",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "22:00",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         }
@@ -1629,17 +1629,17 @@
   {
     "año": "4",
     "dictado": "2",
-    "materia": "Electrónica Industrial ",
-    "curso": "4X3 ",
+    "materia": "Electrónica Industrial",
+    "curso": "4X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -1649,29 +1649,29 @@
   {
     "año": "4",
     "dictado": "2",
-    "materia": "Electrónica Industrial ",
-    "curso": "4X4 ",
+    "materia": "Electrónica Industrial",
+    "curso": "4X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -1681,17 +1681,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Elementos de Máquinas ",
-    "curso": "4X3 ",
+    "materia": "Elementos de Máquinas",
+    "curso": "4X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -1701,17 +1701,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Elementos de Máquinas ",
-    "curso": "4X4 ",
+    "materia": "Elementos de Máquinas",
+    "curso": "4X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -1721,17 +1721,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Máquinas Eléctricas ",
-    "curso": "4X3 ",
+    "materia": "Máquinas Eléctricas",
+    "curso": "4X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -1741,29 +1741,29 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Máquinas Eléctricas ",
-    "curso": "4X4 ",
+    "materia": "Máquinas Eléctricas",
+    "curso": "4X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1773,29 +1773,29 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Máquinas Térmicas ",
-    "curso": "4X3 ",
+    "materia": "Máquinas Térmicas",
+    "curso": "4X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:45",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
       ],
       "Plan-2023": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:45",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -1805,17 +1805,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Máquinas Térmicas ",
-    "curso": "4X4 ",
+    "materia": "Máquinas Térmicas",
+    "curso": "4X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "21:15",
           "horaFin": "22:45"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -1825,17 +1825,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Mecánica de los Fluidos y Máquinas Fluidodinámicas ",
-    "curso": "4X3 ",
+    "materia": "Mecánica de los Fluidos y Máquinas Fluidodinámicas",
+    "curso": "4X3",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         }
@@ -1845,17 +1845,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Mecánica de los Fluidos y Máquinas Fluidodinámicas ",
-    "curso": "4X4 ",
+    "materia": "Mecánica de los Fluidos y Máquinas Fluidodinámicas",
+    "curso": "4X4",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
@@ -1865,17 +1865,17 @@
   {
     "año": "4",
     "dictado": "A",
-    "materia": "Mecánica de los Fluídos y Máquinas Fluidodinámicas ",
-    "curso": "4X4 ",
+    "materia": "Mecánica de los Fluídos y Máquinas Fluidodinámicas",
+    "curso": "4X4",
     "dias": {
       "Plan-2023": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "20:30",
           "horaFin": "22:00"
         }
@@ -1885,12 +1885,12 @@
   {
     "año": "5",
     "dictado": "A",
-    "materia": "Cálculo y Control de Máquinas Eléctricas (Elec.) ",
-    "curso": "5X2 ",
+    "materia": "Cálculo y Control de Máquinas Eléctricas (Elec.)",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Sabado ",
+          "diaCursado": "Sabado",
           "horaInicio": "08:45",
           "horaFin": "11:45"
         }
@@ -1900,22 +1900,22 @@
   {
     "año": "5",
     "dictado": "2",
-    "materia": "Centrales y Sistemas de Transmisión ",
-    "curso": "5X2 ",
+    "materia": "Centrales y Sistemas de Transmisión",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         },
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "20:30",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -1925,12 +1925,12 @@
   {
     "año": "5",
     "dictado": "2",
-    "materia": "Formación de Emprendedores (Elec.) ",
-    "curso": "7X1 ",
+    "materia": "Formación de Emprendedores (Elec.)",
+    "curso": "7X1",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "16:00",
           "horaFin": "19:00"
         }
@@ -1940,17 +1940,17 @@
   {
     "año": "5",
     "dictado": "A",
-    "materia": "Fuentes Renovables de Energía y Desarrollo Sustentable (Elec.) ",
-    "curso": "5X2 ",
+    "materia": "Fuentes Renovables de Energía y Desarrollo Sustentable (Elec.)",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "17:30",
           "horaFin": "19:00"
         }
@@ -1960,17 +1960,17 @@
   {
     "año": "5",
     "dictado": "A",
-    "materia": "Máquinas y Equipos Industriales (Elec.) ",
-    "curso": "5X2 ",
+    "materia": "Máquinas y Equipos Industriales (Elec.)",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         },
         {
-          "diaCursado": "Jueves ",
+          "diaCursado": "Jueves",
           "horaInicio": "19:00",
           "horaFin": "22:00"
         }
@@ -1980,17 +1980,17 @@
   {
     "año": "5",
     "dictado": "2",
-    "materia": "Organización Industrial ",
-    "curso": "5X2 ",
+    "materia": "Organización Industrial",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         },
         {
-          "diaCursado": "Miércoles ",
+          "diaCursado": "Miércoles",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
@@ -2000,17 +2000,17 @@
   {
     "año": "5",
     "dictado": "2",
-    "materia": "Proyecto Final ",
-    "curso": "5X2 ",
+    "materia": "Proyecto Final",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Lunes ",
+          "diaCursado": "Lunes",
           "horaInicio": "16:45",
           "horaFin": "19:00"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "19:00",
           "horaFin": "21:15"
         }
@@ -2020,17 +2020,17 @@
   {
     "año": "5",
     "dictado": "A",
-    "materia": "Redes de Distribución e Instalaciones Eléctricas ",
-    "curso": "5X2 ",
+    "materia": "Redes de Distribución e Instalaciones Eléctricas",
+    "curso": "5X2",
     "dias": {
       "Plan-95": [
         {
-          "diaCursado": "Martes ",
+          "diaCursado": "Martes",
           "horaInicio": "19:00",
           "horaFin": "20:30"
         },
         {
-          "diaCursado": "Viernes ",
+          "diaCursado": "Viernes",
           "horaInicio": "21:15",
           "horaFin": "23:30"
         }
