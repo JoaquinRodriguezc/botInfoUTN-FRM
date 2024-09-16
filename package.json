@@ -15,7 +15,8 @@
     "@builderbot/bot": "1.2.2",
     "@builderbot/provider-baileys": "1.2.2",
     "dotenv": "^16.4.5",
-    "googleapis": "^142.0.0"
+    "googleapis": "^142.0.0",
+    "openai": "^4.61.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",

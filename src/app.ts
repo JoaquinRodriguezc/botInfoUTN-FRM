@@ -1,38 +1,73 @@
-import { join } from "path";
 import {
   createBot,
   createProvider,
   createFlow,
   addKeyword,
-  utils,
 } from "@builderbot/bot";
 import { MemoryDB as Database } from "@builderbot/bot";
 import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
-import { getAll, getBySubject, listUpcomingEvents } from "./mesas";
-import { prettyPrintForWhatsApp, searchHorario } from "./horarios";
+import { getAll, getBySubject } from "./mesas";
+import { prettyPrintForWhatsApp, searchHorario } from "./horarios.js";
+import { userInputToCommand } from "./openia";
 
 const PORT = process.env.PORT ?? 3008;
-
-const horariosFlow = addKeyword("!horario").addAnswer(
+const USE_OPEN_IA = process.env.USE_OPEN_IA === "true";
+const horariosFlow = addKeyword("").addAnswer(
   "Buscando horario...",
   null,
   async (ctx, { flowDynamic }) => {
-    const args = ctx.body.split(" ");
-    if (args.length >= 3) {
-      const materia = args.slice(1, -1).join(" ");
-      const res = await searchHorario(materia, args.pop());
-      if (!res) {
-        console.log("error", res);
-        return;
-      }
-      await flowDynamic(prettyPrintForWhatsApp(res[0]));
+    let res;
+    if (USE_OPEN_IA) {
+      const { materia, comision } = await userInputToCommand(ctx.body);
+      res = await searchHorario(materia, comision);
     } else {
-      console.log("ERROR");
+      const args = ctx.body.split(" ");
+      if (args.length >= 3) {
+        const materia = args.slice(2).join(" ");
+        res = await searchHorario(materia, args[1]);
+      } else {
+        await flowDynamic(
+          `
+  📄 */horario [materia] [comisión]*  
+  📝 *Ejemplo:*  
+  /horario Análisis de Sistemas de Información 2K01
+  `
+        );
+      }
     }
+    if (!res?.data) {
+      await flowDynamic(
+        "No se encontró horario para la comisión y materia pedida"
+      );
+      return;
+    }
+    await flowDynamic(prettyPrintForWhatsApp(res.data[0]));
   }
 );
+const message = `
+👋 *Hola!* Estos son los comandos para buscar información:
 
-const mesasFlow = addKeyword("!mesas").addAnswer(
+📄 */horario [materia] [comisión]*  
+📝 *Ejemplo:*  
+/horario Análisis de Sistemas de Información 2K01
+
+📄 */mesas* (trae todas las mesas)  
+📄 */mesas [nombre materia]*  
+📝 *Ejemplo:*  
+/mesas Informática I
+
+📄 Para apuntes : https://apuntesutnmza.com
+
+🌐 *Fuentes*:  
+Información sacada de http://encuesta.frm.utn.edu.ar/horariocurso/  
+Calendario de la Manuel Salvio: https://www.lamanuelsavio.org/calendario/
+`;
+console.log(message);
+const startFlow = addKeyword("/menu").addAnswer(message);
+const apuntesFlow = addKeyword("/apuntes").addAnswer(
+  "Página web con apuntes de alumnos: https://apuntesutnmza.com"
+);
+const mesasFlow = addKeyword("/mesas").addAnswer(
   "Buscando mesa...",
   null,
   async (ctx, { flowDynamic }) => {
@@ -48,49 +83,13 @@ const mesasFlow = addKeyword("!mesas").addAnswer(
   }
 );
 
-const registerFlow = addKeyword<Provider, Database>(
-  utils.setEvent("REGISTER_FLOW")
-)
-  .addAnswer(
-    `What is your name?`,
-    { capture: true },
-    async (ctx, { state }) => {
-      await state.update({ name: ctx.body });
-    }
-  )
-  .addAnswer("What is your age?", { capture: true }, async (ctx, { state }) => {
-    await state.update({ age: ctx.body });
-  })
-  .addAction(async (_, { flowDynamic, state }) => {
-    await flowDynamic(
-      `${state.get(
-        "name"
-      )}, thanks for your information!: Your age: ${state.get("age")}`
-    );
-  });
-
-const fullSamplesFlow = addKeyword<Provider, Database>([
-  "samples",
-  utils.setEvent("SAMPLES"),
-])
-  .addAnswer(`💪 I'll send you a lot files...`)
-  .addAnswer(`Send image from Local`, {
-    media: join(process.cwd(), "assets", "sample.png"),
-  })
-  .addAnswer(`Send video from URL`, {
-    media:
-      "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTJ0ZGdjd2syeXAwMjQ4aWdkcW04OWlqcXI3Ynh1ODkwZ25zZWZ1dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LCohAb657pSdHv0Q5h/giphy.mp4",
-  })
-  .addAnswer(`Send audio from URL`, {
-    media: "https://cdn.freesound.org/previews/728/728142_11861866-lq.mp3",
-  })
-  .addAnswer(`Send file from URL`, {
-    media:
-      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-  });
-
 const main = async () => {
-  const adapterFlow = createFlow([mesasFlow, horariosFlow]);
+  const adapterFlow = createFlow([
+    mesasFlow,
+    horariosFlow,
+    startFlow,
+    apuntesFlow,
+  ]);
 
   const adapterProvider = createProvider(Provider);
   const adapterDB = new Database();

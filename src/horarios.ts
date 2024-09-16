@@ -1,5 +1,5 @@
 import { StringDecoder } from "node:string_decoder";
-import htmlTableToObject, { HorarioCurso } from "./parser";
+import htmlTableToObject, { HorarioCurso } from "./parser.js";
 import fs from "node:fs";
 export enum Especialidades {
   SISTEMAS = "5",
@@ -73,7 +73,7 @@ export async function loadHorarios() {
         acc = [...acc, ...currentValue];
         return acc;
       });
-
+    console.log(horarios.map((e) => e.materia).join(","));
     return horarios;
   } catch (error) {
     console.log(error);
@@ -81,18 +81,22 @@ export async function loadHorarios() {
 }
 export async function searchHorario(materia: string, curso: string) {
   const horarios = await loadHorarios();
-  console.log(horarios);
-  console.log("Buscando horariso de ", materia, " ", curso);
+  const materiaNormalizada = normalize(materia);
+  const cursoNormalizado = normalize(curso);
   const found = horarios.filter((e) => {
-    if (e.materia === materia && e.curso === curso) {
+    if (
+      normalize(e.materia) === materiaNormalizada &&
+      normalize(e.curso) === cursoNormalizado
+    ) {
       return e;
     }
   });
   if (found.length === 0) {
     console.log("Horario no encontrado");
-    return;
+    return { data: null };
   }
-  return found;
+
+  return { data: found };
 }
 
 export function prettyPrintForWhatsApp(horario: HorarioCurso): string {
@@ -107,4 +111,12 @@ export function prettyPrintForWhatsApp(horario: HorarioCurso): string {
   }
 
   return result.trim();
+}
+
+export default function normalize(subject: string) {
+  return subject
+    .toLowerCase()
+    .trimStart()
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "");
 }
