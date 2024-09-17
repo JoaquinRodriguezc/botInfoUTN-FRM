@@ -8,7 +8,7 @@ import { MemoryDB as Database } from "@builderbot/bot";
 import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
 import { getAll, getBySubject } from "./mesas.js";
 import { prettyPrintForWhatsApp, searchHorario } from "./horarios.js";
-import { userInputToCommand } from "./openia";
+import { userInputToCommand } from "./openia.js";
 
 const PORT = process.env.PORT ?? 3008;
 const USE_OPEN_IA = process.env.USE_OPEN_IA === "true";
