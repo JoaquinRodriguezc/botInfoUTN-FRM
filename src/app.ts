@@ -16,7 +16,10 @@ const USE_OPEN_IA = process.env.USE_OPEN_IA === "true";
 const mainFlow = addKeyword("").addAction(
   async (ctx, { state, gotoFlow, endFlow }): Promise<void> => {
     if (USE_OPEN_IA) {
+      console.log("Using IA for convert user input to commands");
+      console.log("User:", ctx.body);
       const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
+      console.log("Converted query", userQuery);
       if (userQuery.error) {
         return endFlow(
           `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
@@ -41,10 +44,12 @@ const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
     const { materia, comision } = state.get("data");
     const res = await searchHorario(materia, comision);
     if (!res.data) {
+      console.log("No data for comision and materia");
       return endFlow(
         "No se encontró información para la materia y comisión mandada"
       );
     }
+    console.log(res.data);
     return await flowDynamic(prettyPrintForWhatsApp(res.data[0]));
   }
 );
