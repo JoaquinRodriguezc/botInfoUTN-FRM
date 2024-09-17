@@ -16,9 +16,21 @@ const horariosFlow = addKeyword("").addAnswer(
   "Buscando horario...",
   null,
   async (ctx, { flowDynamic }) => {
+    const args = ctx.body.split(" ");
+    if (args.length < 2) {
+      await flowDynamic(
+        "Por favor ingrese al menos una comisión y materia para obtener el horarios"
+      );
+    }
     let res;
     if (USE_OPEN_IA) {
-      const { materia, comision } = await userInputToCommand(ctx.body);
+      const { error, materia, comision } = await userInputToCommand(ctx.body);
+      if (error) {
+        await flowDynamic(
+          "No se encontró horario para la comisión y materia pedida"
+        );
+        return;
+      }
       res = await searchHorario(materia, comision);
     } else {
       const args = ctx.body.split(" ");
