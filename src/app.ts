@@ -3,58 +3,49 @@ import {
   createProvider,
   createFlow,
   addKeyword,
+  EVENTS,
 } from "@builderbot/bot";
 import { MemoryDB as Database } from "@builderbot/bot";
 import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
 import { getAll, getBySubject } from "./mesas.js";
 import { prettyPrintForWhatsApp, searchHorario } from "./horarios.js";
-import { userInputToCommand } from "./openia.js";
+import { convertMsgToQuery, UserQueryType } from "./openia.js";
 
 const PORT = process.env.PORT ?? 3008;
 const USE_OPEN_IA = process.env.USE_OPEN_IA === "true";
-const horariosFlow = addKeyword("").addAnswer(
-  "Buscando horario...",
-  null,
-  async (ctx, { flowDynamic }) => {
-    const args = ctx.body.split(" ");
-    if (args.length < 2) {
-      await flowDynamic(
-        "Por favor ingrese al menos una comisión y materia para obtener el horarios"
-      );
-      return;
-    }
-    let res;
+const mainFlow = addKeyword("").addAction(
+  async (ctx, { state, gotoFlow, endFlow }): Promise<void> => {
     if (USE_OPEN_IA) {
-      const { error, materia, comision } = await userInputToCommand(ctx.body);
-      if (error) {
-        await flowDynamic(
-          "No se encontró horario para la comisión y materia pedida"
+      const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
+      if (userQuery.error) {
+        return endFlow(
+          `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
         );
-        return;
       }
-      res = await searchHorario(materia, comision);
+      await state.update({ data: userQuery.data });
+      if (userQuery.query === "horarios") {
+        return gotoFlow(horariosFlow);
+      }
+      if (userQuery.query === "menu") {
+        return gotoFlow(menuFlow);
+      }
+      if (userQuery.query === "mesas") {
+        return gotoFlow(mesasFlow);
+      }
     } else {
-      const args = ctx.body.split(" ");
-      if (args.length >= 3) {
-        const materia = args.slice(2).join(" ");
-        res = await searchHorario(materia, args[1]);
-      } else {
-        await flowDynamic(
-          `
-  📄 */horario [materia] [comisión]*  
-  📝 *Ejemplo:*  
-  /horario Análisis de Sistemas de Información 2K01
-  `
-        );
-      }
     }
-    if (!res?.data) {
-      await flowDynamic(
-        "No se encontró horario para la comisión y materia pedida"
+  }
+);
+const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
+  async (_, { flowDynamic, state, endFlow }) => {
+    const { materia, comision } = state.get("data");
+    const res = await searchHorario(materia, comision);
+    if (!res.data) {
+      return endFlow(
+        "No se encontró información para la materia y comisión mandada"
       );
-      return;
     }
-    await flowDynamic(prettyPrintForWhatsApp(res.data[0]));
+    return await flowDynamic(prettyPrintForWhatsApp(res.data[0]));
   }
 );
 const message = `
@@ -75,32 +66,43 @@ const message = `
 Información sacada de http://encuesta.frm.utn.edu.ar/horariocurso/  
 Calendario de la Manuel Salvio: https://www.lamanuelsavio.org/calendario/
 `;
-console.log(message);
-const startFlow = addKeyword("/menu").addAnswer(message);
+const menuFlow = addKeyword(EVENTS.ACTION).addAnswer(message);
 const apuntesFlow = addKeyword("/apuntes").addAnswer(
   "Página web con apuntes de alumnos: https://apuntesutnmza.com"
 );
-const mesasFlow = addKeyword("/mesas").addAnswer(
+const mesasFlow = addKeyword(EVENTS.ACTION).addAnswer(
   "Buscando mesa...",
   null,
-  async (ctx, { flowDynamic }) => {
-    if (ctx.body.split(" ").length === 1) {
-      const res = await getAll();
-      await flowDynamic(res);
+  async (ctx, { state, flowDynamic }) => {
+    if (!USE_OPEN_IA) {
+      if (ctx.body.split(" ").length === 1) {
+        const res = await getAll();
+        await flowDynamic(res);
+      } else {
+        const materia = ctx.body.split(" ").slice(1).join(" ");
+        console.log(materia);
+        const res = await getBySubject(materia);
+        await flowDynamic(res);
+      }
     } else {
-      const materia = ctx.body.split(" ").slice(1).join(" ");
-      console.log(materia);
-      const res = await getBySubject(materia);
-      await flowDynamic(res);
+      const { materia } = state.get("data");
+      if (materia) {
+        const res = await getBySubject(materia);
+        await flowDynamic(res);
+      } else {
+        const res = await getAll();
+        await flowDynamic(res);
+      }
     }
   }
 );
 
 const main = async () => {
   const adapterFlow = createFlow([
+    mainFlow,
     mesasFlow,
     horariosFlow,
-    startFlow,
+    menuFlow,
     apuntesFlow,
   ]);
 

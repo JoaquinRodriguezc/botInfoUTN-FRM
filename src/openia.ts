@@ -5,7 +5,9 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export async function userInputToCommand(userInput: string) {
+export async function convertMsgToQuery(
+  userInput: string
+): Promise<UserQueryType> {
   const assistant = await openai.beta.assistants.retrieve(
     process.env.OPENAI_ASSISTANT_ID
   );
@@ -25,23 +27,32 @@ export async function userInputToCommand(userInput: string) {
     for (const message of messages.data.reverse()) {
       if (message.role === "assistant") {
         const text = message.content[0] as any;
-        const assistantResponse = text.text.value.split("---");
-        if (assistantResponse.length !== 2) {
+        const assistantResponse: UserQueryType = JSON.parse(text.text.value);
+        if (!assistantResponse) {
           return {
             error: true,
-            comision: null,
-            materia: null,
+            query: null,
+            data: null,
           };
         }
+
         console.log(`${message.role} > ${text.text.value}`);
-        return {
-          error: false,
-          comision: assistantResponse[0],
-          materia: assistantResponse[1],
-        };
+        return assistantResponse;
       }
     }
   } else {
     console.log(run);
   }
 }
+export type UserQueryType = {
+  error: boolean;
+  query: "horarios" | "mesas" | "menu";
+  data: DataMesas | DataHorarios | null;
+};
+export type DataMesas = {
+  materia: string | null;
+};
+export type DataHorarios = {
+  materia: string;
+  comsision: string;
+};
