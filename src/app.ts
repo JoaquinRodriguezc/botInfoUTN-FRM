@@ -6,7 +6,7 @@ import {
 } from "@builderbot/bot";
 import { MemoryDB as Database } from "@builderbot/bot";
 import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
-import { getAll, getBySubject } from "./mesas";
+import { getAll, getBySubject } from "./mesas.js";
 import { prettyPrintForWhatsApp, searchHorario } from "./horarios.js";
 import { userInputToCommand } from "./openia";
 
