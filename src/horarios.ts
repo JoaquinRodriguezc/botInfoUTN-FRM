@@ -82,7 +82,11 @@ export async function loadHorarios() {
 export async function searchHorario(materia: string, curso: string) {
   const horarios = await loadHorarios();
   const materiaNormalizada = normalize(materia);
-  const cursoNormalizado = normalize(curso);
+  let cursoNormalizado = normalize(curso);
+  if (cursoNormalizado.length === 3) {
+    const firstPart = cursoNormalizado.slice(0, 2);
+    cursoNormalizado = firstPart + "0" + cursoNormalizado.charAt(2);
+  }
   const found = horarios.filter((e) => {
     if (
       normalize(e.materia) === materiaNormalizada &&
@@ -113,8 +117,8 @@ export function prettyPrintForWhatsApp(horario: HorarioCurso): string {
   return result.trim();
 }
 
-export default function normalize(subject: string) {
-  return subject
+export default function normalize(text: string) {
+  return text
     .toLowerCase()
     .trimStart()
     .normalize("NFD")
