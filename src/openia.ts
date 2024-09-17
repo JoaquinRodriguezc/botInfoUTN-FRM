@@ -46,7 +46,7 @@ export async function convertMsgToQuery(
 }
 export type UserQueryType = {
   error: boolean;
-  query: "horarios" | "mesas" | "menu";
+  query: "horario" | "mesas" | "menu";
   data: DataMesas | DataHorarios | null;
 };
 export type DataMesas = {

@@ -26,7 +26,7 @@ const mainFlow = addKeyword("").addAction(
         );
       }
       await state.update({ data: userQuery.data });
-      if (userQuery.query === "horarios") {
+      if (userQuery.query === "horario") {
         return gotoFlow(horariosFlow);
       }
       if (userQuery.query === "menu") {
