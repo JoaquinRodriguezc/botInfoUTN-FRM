@@ -8,42 +8,51 @@ const openai = new OpenAI({
 export async function convertMsgToQuery(
   userInput: string
 ): Promise<UserQueryType> {
-  const assistant = await openai.beta.assistants.retrieve(
-    process.env.OPENAI_ASSISTANT_ID
-  );
-  if (!assistant) {
-    console.log("No assistant");
-  }
-  const thread = await openai.beta.threads.create();
-  const message = await openai.beta.threads.messages.create(thread.id, {
-    role: "user",
-    content: userInput,
-  });
-  let run = await openai.beta.threads.runs.createAndPoll(thread.id, {
-    assistant_id: assistant.id,
-  });
-  if (run.status === "completed") {
-    const messages = await openai.beta.threads.messages.list(run.thread_id);
-    for (const message of messages.data.reverse()) {
-      if (message.role === "assistant") {
-        const text = message.content[0] as any;
-        console.log("OpenIA response:", text);
-        const assistantResponse: UserQueryType = JSON.parse(text.text.value);
-        if (!assistantResponse) {
-          console.log("Error: ", assistantResponse);
-          return {
-            error: true,
-            query: null,
-            data: null,
-          };
-        }
-
-        console.log(`${message.role} > ${text.text.value}`);
-        return assistantResponse;
-      }
+  try {
+    const assistant = await openai.beta.assistants.retrieve(
+      process.env.OPENAI_ASSISTANT_ID
+    );
+    if (!assistant) {
+      console.log("No assistant");
     }
-  } else {
-    console.log(run);
+    const thread = await openai.beta.threads.create();
+    const message = await openai.beta.threads.messages.create(thread.id, {
+      role: "user",
+      content: userInput,
+    });
+    let run = await openai.beta.threads.runs.createAndPoll(thread.id, {
+      assistant_id: assistant.id,
+    });
+    if (run.status === "completed") {
+      const messages = await openai.beta.threads.messages.list(run.thread_id);
+      for (const message of messages.data.reverse()) {
+        if (message.role === "assistant") {
+          const text = message.content[0] as any;
+          console.log("OpenIA response:", text);
+          const assistantResponse: UserQueryType = JSON.parse(text.text.value);
+          if (!assistantResponse) {
+            console.log("Error: ", assistantResponse);
+            return {
+              error: true,
+              query: null,
+              data: null,
+            };
+          }
+
+          console.log(`${message.role} > ${text.text.value}`);
+          return assistantResponse;
+        }
+      }
+    } else {
+      console.log(run);
+    }
+  } catch (e) {
+    console.log(e);
+    return {
+      error: true,
+      query: null,
+      data: null,
+    };
   }
 }
 export type UserQueryType = {
