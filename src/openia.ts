@@ -25,11 +25,19 @@ export async function userInputToCommand(userInput: string) {
     for (const message of messages.data.reverse()) {
       if (message.role === "assistant") {
         const text = message.content[0] as any;
-        const segundaParte = text.text.value.split("---");
+        const assistantResponse = text.text.value.split("---");
+        if (assistantResponse.length !== 2) {
+          return {
+            error: true,
+            comision: null,
+            materia: null,
+          };
+        }
         console.log(`${message.role} > ${text.text.value}`);
         return {
-          comision: segundaParte[0],
-          materia: segundaParte[1],
+          error: false,
+          comision: assistantResponse[0],
+          materia: assistantResponse[1],
         };
       }
     }
