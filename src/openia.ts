@@ -27,8 +27,10 @@ export async function convertMsgToQuery(
     for (const message of messages.data.reverse()) {
       if (message.role === "assistant") {
         const text = message.content[0] as any;
+        console.log("OpenIA response:", text);
         const assistantResponse: UserQueryType = JSON.parse(text.text.value);
         if (!assistantResponse) {
+          console.log("Error: ", assistantResponse);
           return {
             error: true,
             query: null,
