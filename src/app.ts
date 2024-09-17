@@ -21,6 +21,7 @@ const horariosFlow = addKeyword("").addAnswer(
       await flowDynamic(
         "Por favor ingrese al menos una comisión y materia para obtener el horarios"
       );
+      return;
     }
     let res;
     if (USE_OPEN_IA) {
