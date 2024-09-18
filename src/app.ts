@@ -96,7 +96,7 @@ const mesasFlow = addKeyword(EVENTS.ACTION).addAnswer(
       }
     } else {
       const { materia } = state.get("data");
-      if (materia && materia === "null") {
+      if (materia && materia !== "null") {
         console.log("Buscand mesa para: ", materia);
         const res = await getBySubject(materia);
         console.log(res);
