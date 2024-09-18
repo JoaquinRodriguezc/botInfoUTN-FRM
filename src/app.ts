@@ -28,23 +28,27 @@ const mainFlow = addKeyword("").addAction(
     if (USE_OPEN_IA) {
       console.log("Using IA for convert user input to commands");
       console.log("User:", ctx.body);
-      const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
-      console.log("Converted query", userQuery);
-      if (userQuery.error) {
-        globalState.update({ from: null });
-        return endFlow(
-          `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
-        );
-      }
-      await state.update({ data: userQuery.data });
-      if (userQuery.query === "horario") {
-        return gotoFlow(horariosFlow);
-      }
-      if (userQuery.query === "menu") {
-        return gotoFlow(menuFlow);
-      }
-      if (userQuery.query === "mesas") {
-        return gotoFlow(mesasFlow);
+      try {
+        const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
+        console.log("Converted query", userQuery);
+        if (userQuery.error) {
+          globalState.update({ from: null });
+          return endFlow(
+            `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
+          );
+        }
+        await state.update({ data: userQuery.data });
+        if (userQuery.query === "horario") {
+          return gotoFlow(horariosFlow);
+        }
+        if (userQuery.query === "menu") {
+          return gotoFlow(menuFlow);
+        }
+        if (userQuery.query === "mesas") {
+          return gotoFlow(mesasFlow);
+        }
+      } catch (e) {
+        console.log(e);
       }
     } else {
     }
