@@ -97,11 +97,12 @@ const mesasFlow = addKeyword(EVENTS.ACTION).addAnswer(
     } else {
       const { materia } = state.get("data");
       if (materia && materia !== "null") {
-        console.log("Buscand mesa para: ", materia);
+        console.log("Buscando mesa para: ", materia);
         const res = await getBySubject(materia);
         console.log(res);
         await flowDynamic(res);
       } else {
+        console.log("Buscando todas las mesas: ");
         const res = await getAll();
         await flowDynamic(res);
       }
