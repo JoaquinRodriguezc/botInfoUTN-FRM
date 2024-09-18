@@ -71,7 +71,9 @@ export async function getBySubject(subject: string) {
     return "No se encontraron fechas para la materia: " + subject;
   }
   const fechas = date.reduce((prev, current, index) => {
-    return `${prev} 📅${getDayName(new Date(current.day))}: ${current.day}${
+    return `${prev} 📅${getDayName(
+      new Date(current.day)
+    )}: ${new Intl.DateTimeFormat("es-ES").format(new Date(current.day))}${
       index === date.length - 1 ? "" : "\n"
     }`;
   }, `Las fechas para rendir la materia ${date[0].subject} son:\n`);
