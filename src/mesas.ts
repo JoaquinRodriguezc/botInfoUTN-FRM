@@ -15,7 +15,6 @@ export async function listUpcomingEvents() {
       orderBy: "startTime",
     });
     const events = res.data.items;
-    console.log(events);
     if (events.length) {
       return events;
     } else {
@@ -118,11 +117,11 @@ function getDateForSubject(
   const res = [];
   for (const [day, degrees] of info.entries()) {
     for (const [degree, subjects] of degrees.entries()) {
+      console.log(subjects);
       const normalizedSubject = subject
         .toLowerCase()
         .normalize("NFD")
         .replace(/\p{Diacritic}/gu, "");
-
       const originalItem = subjects.find(
         (item) =>
           item
@@ -141,4 +140,3 @@ function getDateForSubject(
   }
   return res;
 }
-
