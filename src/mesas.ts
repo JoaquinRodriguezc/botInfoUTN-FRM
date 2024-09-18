@@ -105,6 +105,7 @@ function getLines(description: string): string[] {
     .join(";")
     .split('<p dir="ltr">')
     .join(";")
+    .replace(/\s*\(.*?\)\s*/g, "")
     .split("<br>")
     .join(";")
     .split(";")
