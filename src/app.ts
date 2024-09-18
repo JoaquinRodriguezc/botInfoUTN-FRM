@@ -42,6 +42,11 @@ const mainFlow = addKeyword("").addAction(
 const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
   async (_, { flowDynamic, state, endFlow }) => {
     const { materia, comision } = state.get("data");
+    if (!materia || !comision) {
+      return endFlow(
+        "No se encontró información para la materia y comisión mandada"
+      );
+    }
     const res = await searchHorario(materia, comision);
     if (!res.data) {
       console.log("No data for comision and materia");

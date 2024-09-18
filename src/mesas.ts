@@ -122,12 +122,12 @@ function getDateForSubject(
         .toLowerCase()
         .normalize("NFD")
         .replace(/\p{Diacritic}/gu, "");
-      const originalItem = subjects.find(
-        (item) =>
-          item
-            .toLowerCase()
-            .normalize("NFD")
-            .replace(/\p{Diacritic}/gu, "") === normalizedSubject
+      const originalItem = subjects.find((item) =>
+        item
+          .toLowerCase()
+          .normalize("NFD")
+          .replace(/\p{Diacritic}/gu, "")
+          .includes(normalizedSubject)
       );
 
       if (originalItem) {
