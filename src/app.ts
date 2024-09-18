@@ -30,6 +30,7 @@ const mainFlow = addKeyword("").addAction(
       const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
       console.log("Converted query", userQuery);
       if (userQuery.error) {
+        globalState.update({ from: null });
         return endFlow(
           `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
         );
