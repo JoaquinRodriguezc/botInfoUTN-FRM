@@ -1,5 +1,5 @@
 import { google, calendar_v3 } from "googleapis";
-import { calendar } from "./calendar";
+import { calendar } from "./calendar.js";
 type DateForSubject = {
   day: string;
   degree: string;
