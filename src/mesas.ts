@@ -71,7 +71,7 @@ export async function getBySubject(subject: string) {
     return "No se encontraron fechas para la materia: " + subject;
   }
   const fechas = date.reduce((prev, current, index) => {
-    return `${prev} 📅${current.day}${current.day}${
+    return `${prev} 📅${getDayName(new Date(current.day))}: ${current.day}${
       index === date.length - 1 ? "" : "\n"
     }`;
   }, `Las fechas para rendir la materia ${date[0].subject} son:\n`);
@@ -142,4 +142,16 @@ function getDateForSubject(
     return null;
   }
   return res;
+}
+function getDayName(date: Date) {
+  const days = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miercoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+  ];
+  return days[date.getDay()];
 }
