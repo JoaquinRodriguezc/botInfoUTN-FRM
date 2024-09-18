@@ -71,7 +71,9 @@ export async function getBySubject(subject: string) {
     return "No se encontraron fechas para la materia: " + subject;
   }
   const fechas = date.reduce((prev, current, index) => {
-    return `${prev} ${current.day}${index === date.length - 1 ? "" : "\n"}`;
+    return `${prev} 📅${current.day}${current.day}${
+      index === date.length - 1 ? "" : "\n"
+    }`;
   }, `Las fechas para rendir la materia ${date[0].subject} son:\n`);
   return fechas;
 }
@@ -105,6 +107,7 @@ function getLines(description: string): string[] {
     .join(";")
     .split("<br>")
     .join(";")
+    .replace(/\(.*\)/, "")
     .split(";")
     .map((e) => e.slice(0, -4))
     .filter((e) => e !== "" && !e.startsWith("Mesa"));
@@ -122,12 +125,12 @@ function getDateForSubject(
         .toLowerCase()
         .normalize("NFD")
         .replace(/\p{Diacritic}/gu, "");
-      const originalItem = subjects.find((item) =>
-        item
-          .toLowerCase()
-          .normalize("NFD")
-          .replace(/\p{Diacritic}/gu, "")
-          .includes(normalizedSubject)
+      const originalItem = subjects.find(
+        (item) =>
+          item
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/\p{Diacritic}/gu, "") === normalizedSubject
       );
 
       if (originalItem) {
