@@ -17,6 +17,7 @@ const mainFlow = addKeyword("").addAction(
   async (ctx, { state, gotoFlow, endFlow, globalState }): Promise<void> => {
     const from = ctx.from;
     const onGoingResponse = globalState.get(from);
+    console.log("Is on going response?", onGoingResponse);
     console.log("Usuario que habla:", from);
     if (onGoingResponse) {
       console.log("Usuario ya tiene respuesta en camino");
