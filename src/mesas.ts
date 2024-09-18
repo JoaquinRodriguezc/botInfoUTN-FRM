@@ -107,7 +107,6 @@ function getLines(description: string): string[] {
     .join(";")
     .split("<br>")
     .join(";")
-    .replace(/\(.*\)/, "")
     .split(";")
     .map((e) => e.slice(0, -4))
     .filter((e) => e !== "" && !e.startsWith("Mesa"));
