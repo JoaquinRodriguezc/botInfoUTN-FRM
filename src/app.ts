@@ -72,7 +72,7 @@ const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
     console.log(res.data);
     globalState.update({ from: null });
     console.log("Usuario agregado borrado de estado respuesta en curso");
-    return await flowDynamic(prettyPrintForWhatsApp(res.data[0]));
+    return endFlow(prettyPrintForWhatsApp(res.data[0]));
   }
 );
 const message = `
