@@ -14,7 +14,16 @@ import { convertMsgToQuery, UserQueryType } from "./openia.js";
 const PORT = process.env.PORT ?? 3008;
 const USE_OPEN_IA = process.env.USE_OPEN_IA === "true";
 const mainFlow = addKeyword("").addAction(
-  async (ctx, { state, gotoFlow, endFlow }): Promise<void> => {
+  async (ctx, { state, gotoFlow, endFlow, globalState }): Promise<void> => {
+    const from = ctx.from;
+    const onGoingResponse = globalState.get(from);
+    console.log("Usuario que habla:", from);
+    if (onGoingResponse) {
+      console.log("Usuario ya tiene respuesta en camino");
+      return endFlow();
+    }
+    console.log("Usuario agregado a estado ");
+    globalState.update({ from });
     if (USE_OPEN_IA) {
       console.log("Using IA for convert user input to commands");
       console.log("User:", ctx.body);
@@ -40,21 +49,27 @@ const mainFlow = addKeyword("").addAction(
   }
 );
 const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
-  async (_, { flowDynamic, state, endFlow }) => {
+  async (ctx, { globalState, flowDynamic, state, endFlow }) => {
     const { materia, comision } = state.get("data");
     if (!materia || !comision) {
+      globalState.update({ from: null });
+      console.log("Usuario agregado borrado de estado respuesta en curso");
       return endFlow(
         "No se encontró información para la materia y comisión mandada"
       );
     }
     const res = await searchHorario(materia, comision);
     if (!res.data) {
+      globalState.update({ from: null });
+      console.log("Usuario agregado borrado de estado respuesta en curso");
       console.log("No data for comision and materia");
       return endFlow(
         "No se encontró información para la materia y comisión mandada"
       );
     }
     console.log(res.data);
+    globalState.update({ from: null });
+    console.log("Usuario agregado borrado de estado respuesta en curso");
     return await flowDynamic(prettyPrintForWhatsApp(res.data[0]));
   }
 );
