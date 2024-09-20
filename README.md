@@ -1,14 +1,2 @@
-## INSTRUCCIONES PARA CORRER
-
-### Instalar dependencias
-
-`pnpm install`
-
-### Compilar
-
-`tsc`
-
-### Obtener horarios
-
-`cd /dist/src`
-`node horarios.js`
+# BOT INFO UTN
+BOT hecho por los alumnos con la finalidad de acceder mediante Whatsapp a la información que expone la facultad!
