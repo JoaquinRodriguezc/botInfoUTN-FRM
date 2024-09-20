@@ -170,11 +170,19 @@ const main = async () => {
   const adapterProvider = createProvider(Provider);
   const adapterDB = new Database();
 
-  const { handleCtx, httpServer } = await createBot({
-    flow: adapterFlow,
-    provider: adapterProvider,
-    database: adapterDB,
-  });
+  const { handleCtx, httpServer } = await createBot(
+    {
+      flow: adapterFlow,
+      provider: adapterProvider,
+      database: adapterDB,
+    },
+    {
+      queue: {
+        timeout: 20000,
+        concurrencyLimit: 50,
+      },
+    }
+  );
 
   adapterProvider.server.post(
     "/v1/messages",
