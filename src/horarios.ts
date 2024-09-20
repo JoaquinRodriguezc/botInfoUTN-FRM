@@ -113,7 +113,7 @@ export function prettyPrintForWhatsApp(horario: HorarioCurso): string {
     });
     result += "\n";
   }
-
+  result += "Fuente: http://encuesta.frm.utn.edu.ar/horariocurso/";
   return result.trim();
 }
 

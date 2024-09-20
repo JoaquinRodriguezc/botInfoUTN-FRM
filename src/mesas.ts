@@ -77,7 +77,7 @@ export async function getBySubject(subject: string) {
       index === date.length - 1 ? "" : "\n"
     }`;
   }, `Las fechas para rendir la materia ${date[0].subject} son:\n`);
-  return fechas;
+  return fechas + "Fuente: https://www.lamanuelsavio.org/calendario/";
 }
 function mapEntriesToString(entries: Map<string, any>, indentLevel = 0) {
   const indent = " ".repeat(indentLevel);

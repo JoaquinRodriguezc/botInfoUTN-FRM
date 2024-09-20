@@ -10,55 +10,82 @@ import { BaileysProvider as Provider } from "@builderbot/provider-baileys";
 import { getAll, getBySubject } from "./mesas.js";
 import { prettyPrintForWhatsApp, searchHorario } from "./horarios.js";
 import { convertMsgToQuery, UserQueryType } from "./openia.js";
+import debounce from "./utils.js";
 
 const PORT = process.env.PORT ?? 3008;
 const USE_OPEN_IA = process.env.USE_OPEN_IA === "true";
 const mainFlow = addKeyword("").addAction(
-  async (ctx, { state, gotoFlow, endFlow, globalState }): Promise<void> => {
+  async (ctx, { state, gotoFlow, endFlow, flowDynamic }): Promise<void> => {
+    if (
+      ctx.body.includes("event_media") ||
+      ctx.body.includes("_event_voice_note__") ||
+      ctx.body.includes("_event_document__")
+    ) {
+      console.log("Mensaje contiene imagenes,foto o audio.Aborot");
+      return endFlow(
+        "Soy buen lector pero no puedo leer imagenes  o escuchar tu audio :("
+      );
+    }
+    if (ctx.body.length > 200) {
+      console.log("Mensaje muy largo.Aborto.");
+      return endFlow("Tu mensaje es muy largo por favor, mandamelo resumido!");
+    }
+    if (ctx.body.length <= 4) {
+      if (ctx.body.toLowerCase() === "hola") {
+        return endFlow("Hola!");
+      }
+      console.log("Mensaje muy corto.Aborto.");
+      return endFlow("Tu mensaje fue muy corto, por favor explayate más!");
+    }
     const from = ctx.from;
-    const onGoingResponse = globalState.get(from);
+    const onGoingResponse = state?.getMyState()?.from;
     console.log("Is on going response?", onGoingResponse);
     console.log("Usuario que habla:", from);
     if (onGoingResponse) {
       console.log("Usuario ya tiene respuesta en camino");
-      return endFlow();
+      return endFlow("");
     }
-    console.log("Usuario agregado a estado ");
-    globalState.update({ from });
-    if (USE_OPEN_IA) {
-      console.log("Using IA for convert user input to commands");
-      console.log("User:", ctx.body);
-      try {
-        const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
-        console.log("Converted query", userQuery);
-        if (userQuery.error) {
-          globalState.update({ from: null });
-          return endFlow(
-            `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
-          );
+    await state.update({ from: true });
+    const getFrom = state.getMyState();
+    console.log("Usuario agregado a estado ", getFrom);
+    flowDynamic("Tu mensaje está siendo atendido...");
+    const debunced = debounce(async () => {
+      if (USE_OPEN_IA) {
+        console.log("Using IA for convert user input to commands");
+        console.log("User:", ctx.body);
+        try {
+          const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
+          console.log("Converted query", userQuery);
+          if (userQuery.error) {
+            state.update({ from: null });
+            return endFlow(
+              `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
+            );
+          }
+          await state.update({ data: userQuery.data });
+          if (userQuery.query === "horario") {
+            return gotoFlow(horariosFlow);
+          }
+          if (userQuery.query === "menu") {
+            return gotoFlow(menuFlow);
+          }
+          if (userQuery.query === "mesas") {
+            return gotoFlow(mesasFlow);
+          }
+        } catch (e) {
+          console.log(e);
         }
-        await state.update({ data: userQuery.data });
-        if (userQuery.query === "horario") {
-          return gotoFlow(horariosFlow);
-        }
-        if (userQuery.query === "menu") {
-          return gotoFlow(menuFlow);
-        }
-        if (userQuery.query === "mesas") {
-          return gotoFlow(mesasFlow);
-        }
-      } catch (e) {
-        console.log(e);
+      } else {
       }
-    } else {
-    }
+    }, 10000);
+    debunced(ctx.body);
   }
 );
 const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
-  async (ctx, { globalState, flowDynamic, state, endFlow }) => {
+  async (ctx, { state, flowDynamic, endFlow }) => {
     const { materia, comision } = state.get("data");
     if (!materia || !comision) {
-      globalState.update({ from: null });
+      state.update({ from: null });
       console.log("Usuario agregado borrado de estado respuesta en curso");
       return endFlow(
         "No se encontró información para la materia y comisión mandada"
@@ -66,7 +93,7 @@ const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
     }
     const res = await searchHorario(materia, comision);
     if (!res.data) {
-      globalState.update({ from: null });
+      state.update({ from: null });
       console.log("Usuario agregado borrado de estado respuesta en curso");
       console.log("No data for comision and materia");
       return endFlow(
@@ -74,7 +101,7 @@ const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
       );
     }
     console.log(res.data);
-    globalState.update({ from: null });
+    state.update({ from: null });
     console.log("Usuario agregado borrado de estado respuesta en curso");
     return endFlow(prettyPrintForWhatsApp(res.data[0]));
   }
