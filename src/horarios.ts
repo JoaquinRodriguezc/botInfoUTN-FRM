@@ -114,7 +114,7 @@ export function prettyPrintForWhatsApp(horario: HorarioCurso): string {
     result += "\n";
   }
   result +=
-    "Fuente: http://encuesta.frm.utn.edu.ar/horariocurso/ .Por favor, corroborar.";
+    "Fuente: http://encuesta.frm.utn.edu.ar/horariocurso/ .\nPor favor, corroborar.";
   return result.trim();
 }
 
