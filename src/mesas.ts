@@ -79,7 +79,7 @@ export async function getBySubject(subject: string) {
   }, `Las fechas para rendir la materia ${date[0].subject} son:\n`);
   return (
     fechas +
-    "Fuente: https://www.lamanuelsavio.org/calendario/ .\nPor favor, corroborar."
+    "Fuente: https://www.lamanuelsavio.org/calendario/ \n Por favor, corroborar."
   );
 }
 function mapEntriesToString(entries: Map<string, any>, indentLevel = 0) {
