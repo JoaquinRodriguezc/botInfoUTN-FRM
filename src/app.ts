@@ -135,11 +135,13 @@ const mesasFlow = addKeyword(EVENTS.ACTION).addAnswer(
     if (!USE_OPEN_IA) {
       if (ctx.body.split(" ").length === 1) {
         const res = await getAll();
+        state.update({ from: null });
         await flowDynamic(res);
       } else {
         const materia = ctx.body.split(" ").slice(1).join(" ");
         console.log(materia);
         const res = await getBySubject(materia);
+        state.update({ from: null });
         await flowDynamic(res);
       }
     } else {
@@ -148,10 +150,12 @@ const mesasFlow = addKeyword(EVENTS.ACTION).addAnswer(
         console.log("Buscando mesa para: ", materia);
         const res = await getBySubject(materia);
         console.log(res);
+        state.update({ from: null });
         await flowDynamic(res);
       } else {
         console.log("Buscando todas las mesas: ");
         const res = await getAll();
+        state.update({ from: null });
         await flowDynamic(res);
       }
     }
