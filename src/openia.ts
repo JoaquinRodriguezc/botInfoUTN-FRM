@@ -56,7 +56,7 @@ export async function convertMsgToQuery(
   }
 }
 export type UserQueryType = {
-  error: boolean;
+  error: boolean | string;
   query: "horario" | "mesas" | "menu";
   data: DataMesas | DataHorarios | null;
 };

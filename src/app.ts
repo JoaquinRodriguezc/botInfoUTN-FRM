@@ -21,7 +21,7 @@ const mainFlow = addKeyword("").addAction(
       ctx.body.includes("_event_voice_note__") ||
       ctx.body.includes("_event_document__")
     ) {
-      console.log("Mensaje contiene imagenes,foto o audio.Aborot");
+      console.log("Mensaje contiene imagenes,foto o audio.Aborto");
       return endFlow(
         "Soy buen lector pero no puedo leer imagenes  o escuchar tu audio :("
       );
@@ -32,10 +32,13 @@ const mainFlow = addKeyword("").addAction(
     }
     if (ctx.body.length <= 4) {
       if (ctx.body.toLowerCase() === "hola") {
-        return endFlow("Hola!");
+        return endFlow("Hola!😊");
       }
       console.log("Mensaje muy corto.Aborto.");
       return endFlow("Tu mensaje fue muy corto, por favor explayate más!");
+    }
+    if (ctx.body.toLowerCase().match("gracias")) {
+      return endFlow("De nada! 😊");
     }
     const from = ctx.from;
     const onGoingResponse = state?.getMyState()?.from;
@@ -58,15 +61,14 @@ const mainFlow = addKeyword("").addAction(
           console.log("Converted query", userQuery);
           if (userQuery.error) {
             state.update({ from: null });
-            return endFlow(
-              `Ha habido un error procesando tu mensaje. Probá intentando de vuelta`
-            );
+            return endFlow(userQuery.error as string);
           }
           await state.update({ data: userQuery.data });
           if (userQuery.query === "horario") {
             return gotoFlow(horariosFlow);
           }
           if (userQuery.query === "menu") {
+            state.update({ from: null });
             return gotoFlow(menuFlow);
           }
           if (userQuery.query === "mesas") {
