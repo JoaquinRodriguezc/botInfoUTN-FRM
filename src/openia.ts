@@ -44,7 +44,7 @@ export async function convertMsgToQuery(
       }
     } else {
       if (!promptMessage) {
-        promptMessage = fs.readFileSync("./prompt.json");
+        promptMessage = fs.readFileSync("./prompt.json", "utf8");
       }
       const parsedPrompt = JSON.parse(promptMessage);
       parsedPrompt.push({
