@@ -52,32 +52,35 @@ const mainFlow = addKeyword("").addAction(
     const getFrom = state.getMyState();
     console.log("Usuario agregado a estado ", getFrom);
     flowDynamic("Tu mensaje está siendo atendido...");
-
-    if (USE_OPEN_IA) {
-      console.log("Using IA for convert user input to commands");
-      console.log("User:", ctx.body);
-      try {
-        const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
-        console.log("Converted query", userQuery);
-        if (userQuery.error) {
-          state.update({ from: null });
-          return endFlow(userQuery.error as string);
+    const debunced = debounce(async () => {
+      if (USE_OPEN_IA) {
+        console.log("Using IA for convert user input to commands");
+        console.log("User:", ctx.body);
+        try {
+          const userQuery: UserQueryType = await convertMsgToQuery(ctx.body);
+          console.log("Converted query", userQuery);
+          if (userQuery.error) {
+            state.update({ from: null });
+            return endFlow(userQuery.error as string);
+          }
+          await state.update({ data: userQuery.data });
+          if (userQuery.query === "horario") {
+            return gotoFlow(horariosFlow);
+          }
+          if (userQuery.query === "menu") {
+            state.update({ from: null });
+            return gotoFlow(menuFlow);
+          }
+          if (userQuery.query === "mesas") {
+            return gotoFlow(mesasFlow);
+          }
+        } catch (e) {
+          console.log(e);
         }
-        await state.update({ data: userQuery.data });
-        if (userQuery.query === "horario") {
-          return gotoFlow(horariosFlow);
-        }
-        if (userQuery.query === "menu") {
-          state.update({ from: null });
-          return gotoFlow(menuFlow);
-        }
-        if (userQuery.query === "mesas") {
-          return gotoFlow(mesasFlow);
-        }
-      } catch (e) {
-        console.log(e);
+      } else {
       }
-    }
+    }, 5000);
+    debunced(ctx.body);
   }
 );
 const horariosFlow = addKeyword(EVENTS.ACTION).addAction(
